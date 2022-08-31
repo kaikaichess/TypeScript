@@ -1,0 +1,48 @@
+{
+    /*
+        tsconfig.json是ts编译器的配置文件，ts编译器可以根据它的信息来对代码进行编译
+        include用来指定哪些ts文件需要被编译，在路径中**表示任意目录，*表示任意文件
+        exclude用来指定哪些ts文件不需要被编译，它的默认值为["node_modules", "bower_components", "jspm_packages"]
+        compilerOptions是编译器选项
+    */ 
+    "include": [
+        "./02_basis.ts" 
+    ],
+    "exclude": [
+        "node_modules", 
+        "bower_components", 
+        "jspm_packages"
+    ],
+    "compilerOptions": {
+        // target用来指定ts被变异成js的js版本
+        "target": "ES6",
+        // module用来指定要使用的模块化规范
+        "module": "ES6",
+        // lib用来指定项目中要使用的库，这个选项我们一般不动
+        // "lib": [],
+        //outDir用来指定编译后的文件的所在路径
+        "outDir": "./dist",
+        // outFile可以将全局作用域下的代码合并为一个文件，并且如果要合并文件，module的值必须为AMD或者System
+        // "outFile": "./dist/01_hello.js",
+        // allowJs用来指定是否编译js文件，默认值为false
+        "allowJs": false,
+        // checkJs用来指定是否检查js代码是否合乎规范
+        "checkJs": false,
+        // removeComments用来指定是否移除注释
+        "removeComments": false,
+        // noEmit用来指定是否生成编译后的文件（只使用ts检查语法，不使用ts编译），默认值为false
+        "noEmit": false,
+        // noEmitOnError用来指定当代码有错误时不生成编译结果，默认值为false
+        "noEmitOnError": true,
+        // alwaysStrict被用来指定是否开启严格模式
+        "alwaysStrict": false,
+        // noImplicitAny用来指定当不指定变量类型时，变量类型是否为any
+        "noImplicitAny": false,
+        // noImplicitThis用来指定是否允许不明确类型的this
+        "noImplicitThis": false,
+        // strictNullChecks被用来指定是否严格检查空值
+        "strictNullChecks": false,
+        // strict是所以严格检查的总开关
+        "strict": false
+    }
+}
